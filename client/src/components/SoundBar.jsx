@@ -17,7 +17,7 @@ class SoundBar extends React.Component {
 
   componentDidMount() {
     for (let i = 1; i < 275; i += 1) {
-      const randomNum = () => Math.floor(Math.random() * this.props.sound.decibel);
+      const randomNum = () => Math.floor(Math.random() * 28) + this.props.sound.decibel - 28;
       this.setState(state => state.randomNum.push(randomNum()));
     }
     this.timerID = setInterval(
