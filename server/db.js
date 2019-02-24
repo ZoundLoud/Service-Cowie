@@ -3,8 +3,17 @@ const Sequelize = require('sequelize');
 const { username, password } = require('../config.js');
 
 
+const sequal = new Sequelize('', username, password, {
+  host: '172.17.0.2',
+  port: '3306',
+  dialect: 'mysql',
+});
+
+sequal.query('CREATE DATABASE player;');
+
 const sequelize = new Sequelize('player', username, password, {
-  host: 'cowiedatabase.c3ayie6lwpmv.us-east-1.rds.amazonaws.com',
+  host: '172.17.0.2',
+  port: '3306',
   dialect: 'mysql',
 });
 

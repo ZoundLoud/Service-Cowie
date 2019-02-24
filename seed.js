@@ -2,12 +2,19 @@ const Sequelize = require('sequelize');
 const faker = require('faker');
 const { username, password } = require('./config.js');
 
-const sequelize = new Sequelize('player', username, password, {
-  host: 'cowiedatabase.c3ayie6lwpmv.us-east-1.rds.amazonaws.com',
+const sequal = new Sequelize('', username, password, {
+  host: '172.17.0.2',
+  port: '3306',
   dialect: 'mysql',
 });
 
-// sequelize.query('CREATE DATABASE player;');
+sequal.query('CREATE DATABASE player;');
+
+const sequelize = new Sequelize('player', username, password, {
+  host: '172.17.0.2',
+  port: '3306',
+  dialect: 'mysql',
+});
 
 const Song = sequelize.define('songplayer', {
   id: {

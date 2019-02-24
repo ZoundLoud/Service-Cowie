@@ -10,8 +10,9 @@
   "scripts": {
     "proxy": "webpack-dev-server --config ./webpack.config.js --mode development",
     "server": "nodemon server/index.js",
-    "start": "node server/index.js",
+    "start": "node server/index.js && node node seed.js",
     "react-dev": "webpack -d --watch",
+    "pack": "webpack -d",
     "seeding": "node seed.js",
     "test": "jest",
     "test-watch": "jest --watch --coverage"
