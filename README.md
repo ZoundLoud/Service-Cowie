@@ -10,10 +10,13 @@
 
 ## Usage
 
-npm install
-npm run seeding
-npm run react-dev
-npm run server
+1. npm install
+
+2. npm run seeding
+
+3. npm run react-dev
+
+4. npm run server
 
 
 ## Requirements
